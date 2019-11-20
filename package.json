@@ -7,10 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Justin Keaton and Tawny",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawnfran/HotRestaurant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tawnfran/HotRestaurant/issues"
+  },
+  "homepage": "https://github.com/tawnfran/HotRestaurant#readme"
 }
