@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Table Reservations - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Hot Restaurant</h1>
+      <h3>We only have 5 tables! Book your seat before they're all gone!</h3>
+      <hr>
+      <a href="/add"><button class="btn btn-primary btn-lg"><span class="fa fa-credit-card"></span> Make A Reservation</button></a>
+      <a href="/tables"><button class="btn btn-danger btn-lg"><span
+            class="fa fa-eye"></span> View Tables</button></a>
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+      
+        <div>
+          <a href="http://localhost:3000/api/tables">API Table Link</a> | <a href="http://localhost:3000/api/waitlist">Wait List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // $("#add-btn").on("click", function() {
+    //   var searchedTable = $("#table-search").val().trim();
+
+      // Using a RegEx Pattern to remove spaces from searchedCharacter
+      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+      // searchedTable = searchedTable.replace(/\s+/g, "").toLowerCase();
+
+      $.get("/api/tables/", function(data) {
+        console.log(data);
+        if (data) {
+          $("#stats").show();
+          $("#id").text(data.id);
+          $("#name").text(data.name);
+          $("#email").text(data.email);
+          $("#phone").text(data.phone);
+        } else {
+          $("#name").text(
+            "No Data");
+          $("#stats").hide();
+        }
+
+        for (let i = 0; i < tables.length; i++) {
+           
+          
+        }
+
+      });
+    // });
+
+  </script>
+</body>
+
+</html>
